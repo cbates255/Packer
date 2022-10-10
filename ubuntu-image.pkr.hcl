@@ -1,8 +1,8 @@
 packer {
   required_plugins {
     docker = {
-      version = ">= 0.0.7"
-      source = "github.com/hashicorp/docker"
+      version = ">= 1.0.1"
+      source  = "github.com/hashicorp/docker"
     }
   }
 }
@@ -12,8 +12,8 @@ source "docker" "ubuntu" {
   commit = true
 }
 
-build {  
-  name    = "learn-packer"
+build {
+  name = "learn-packer"
   sources = [
     "source.docker.ubuntu"
   ]
